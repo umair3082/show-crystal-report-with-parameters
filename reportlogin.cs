@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace accountsAPI
 {
-   public static  class Class_change_sourceLocationOfCrystalReport
+   public static  class reportlogin
     {
         public static string dbname= "Db";   
         public static string servername = "ServerName";
