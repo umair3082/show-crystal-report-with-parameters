@@ -1,0 +1,16 @@
+Report1 rpt = new Report1();
+               reportlogin.SetCrystalLogin(rpt);
+                rpt.SetParameterValue("@dt1", dateTimeInput1.Value.ToShortDateString());
+                rpt.SetParameterValue("@dt2", dateTimeInput2.Value.ToShortDateString());
+                //TextObject to = (TextObject)rpt.ReportDefinition.Sections["Section4"].ReportObjects["TXTDT"];
+                //to.Text = "From - " + dateTimeInput1.Value.ToString("dd-MMM-yyyy") + " -To- " + dateTimeInput2.Value.ToString("dd-MMM-yyyy");
+                ShowReport o = new ShowReport();
+                //o.crystalReportViewer1.ReuseParameterValuesOnRefresh = true;
+                o.crystalReportViewer1.ReuseParameterValuesOnRefresh = true;
+                //o.crystalReportViewer1.ReportSource = rpt;
+                //rpt.Refresh();
+                //o.crystalReportViewer1.Refresh();
+                o.crystalReportViewer1.ReportSource = rpt;
+                o.crystalReportViewer1.Refresh();
+                o.crystalReportViewer1.RefreshReport();
+                o.Show();
